@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabrielly Trindade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background-image: url('./IMG_5913.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header,
+        footer {
+            border-radius: 8px;
+        }
+
+        #about-me {
+            background-color: #1E1E2F;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 20px;
+        }
+
+        .profile-pic {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .title {
+            background-color: #7E57C2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 9999px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .content {
+            color: white;
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            color: #7E57C2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="p-6 md:p-12">
+    <header class="flex justify-between items-center mb-10 p-4">
+        <div class="flex items-center">
+            <img src="./IMG_5915.jpeg" alt="Canva Logo" class="h-10">
+        </div>
+        <nav class="hidden md:flex space-x-8 text-purple-800 font-medium">
+            <a href="#inicio">Inicio</a>
+            <a href="" target="_blank">Projetos</a>
+            <a href="#sobre"></a>
+            <a href="https://gabystella3.github.io/Projetosg/" target="_blank"></a>
+            <a href="https://gabystella3.github.io/formulario1/" target="_blank">Contato</a>
+        </nav>
+        <button class="md:hidden bg-purple-800 text-white p-2 rounded" id="menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </header>
+
+    <nav class="mobile-menu bg-purple-200 p-6 rounded-lg text-purple-800 font-medium" id="mobile-menu">
+        <a href="#inicio" class="block mb-4">Inicio</a>
+        <a href="https://gabystella3.github.io/Projetosg/" target="_blank" class="block mb-4">Projetos</a>
+        <a href="#sobre" class="block mb-4"></a>
+        <a href="https://gabystella3.github.io/Projetosg/" target="_blank" class="block mb-4"></a>
+        <a href="https://gabystella3.github.io/formulario1/" target="_blank" class="block">Contato</a>
+    </nav>
+
+    <main class="flex flex-col md:flex-row items-center mt-10">
+        <div class="md:w-1/2 flex justify-center mb-10 md:mb-0">
+            <div class="relative">
+                <div class="absolute top-0 left-0 h-full w-full flex items-center justify-center">
+                    <img src="https://via.placeholder.com/300x300.png?text=Beverage+1"
+                        class="transform -rotate-12 w-48 md:w-64 lg:w-72" alt="Beverage 1">
+                    <img src="https://via.placeholder.com/300x300.png?text=Beverage+2"
+                        class="transform rotate-12 w-48 md:w-64 lg:w-72" alt="Beverage 2">
+                </div>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 text-center md:text-left">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Gabrielly Trindade</h1>
+            <p class="text-lg mb-8">
+                Bem-vindos! Sou uma estudante de Informática determinada a alcançar minha formação como técnica em
+                informática.
+            </p>
+        </div>
+    </main>
+
+    <!-- Seção Sobre Mim -->
+    <section id="about-me" class="flex flex-col items-center justify-center mt-16 p-6">
+        <div class="text-center">
+            <div class="title">Sobre Mim</div>
+            <div class="content mt-6">
+                <p>Olá!</p>
+                <p>Meu nome é <span class="highlight">Gabrielly</span>.</p>
+                <p>Eu sou <span class="highlight">Uma aluna de informática</span> </p>
+                <p>Estou no início da minha jornada nesse incrível mundo da tecnologia e estou animada para aprender mais.</p>
+            </div>
+        </div>
+        <div class="mt-8 profile-pic">
+            <img src="./IMG_5914.jpeg" alt="Nguyen Duc Thang" class="w-48 h-64 object-cover">
+        </div>
+    </section>
+
+    <footer class="mt-12 text-center text-purple-800 text-sm p-4">
+        <p>never stop shining ☆</p>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
